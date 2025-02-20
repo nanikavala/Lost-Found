@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Lost and Found Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
+            color: white;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            font-size: 2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.8em;
+            padding: 5px 15px;
+            background: orange;
+            border-radius: 5px;
+        }
+        .title {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-top: 30px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+        .section {
+            margin: 40px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            text-align: left;
+        }
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            justify-content: center;
+        }
+        .image-box {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .image-box:hover img {
+            transform: scale(1.1);
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: orange;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+          footer {
+    background-color: #0a2740;
+    color: white;
+    padding: 40px 0;
+    width: 100;vw
+    margin: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #081c30;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.footer-bottom span {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>About Us</div>
+       
+    </div>
+    <div class="container">
+        <div class="title">Lost and Found Portal</div>
+        <div class="section">
+            <h2>About the Portal</h2>
+            <p>We are dedicated to helping individuals find their lost belongings efficiently and securely. Our platform connects people in need with those who have found valuable items, making the world a more connected and responsible place.</p>
+            <p>Our system allows users to report lost and found items with detailed descriptions and images. This helps in quicker identification and return of lost belongings. We also implement verification processes to ensure authenticity and prevent fraudulent claims.</p>
+            <p>Features of the Lost and Found Portal:</p>
+            <ul>
+                <li>Easy reporting of lost and found items</li>
+                <li>Image-based identification system</li>
+                <li>Automated matching system for quick recovery</li>
+                <li>Community engagement and support</li>
+                <li>Secure and reliable database management</li>
+            </ul>
+            <div class="image-container">
+                <div class="image-box"><img src="https://st.depositphotos.com/2021995/4151/i/450/depositphotos_41518675-stock-photo-lost-and-found.jpg" alt="Lost and Found 1"></div>
+                <div class="image-box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRssxWag5cQ1xod8wQk-iakhPZq3gzC7EVRUg&s" alt="Lost and Found 2"></div>
+                <div class="image-box"><img src="https://stuyspec-media.s3.us-east-2.amazonaws.com/rewrite_media/ada34150-d701-11ed-999d-63d9c55645a1.jpg" alt="Lost and Found 3"></div>
+                <div class="image-box"><img src="https://t4.ftcdn.net/jpg/02/78/41/17/240_F_278411757_vmA15VKzUMNSt9KTQqhaYhMJHAitWrrH.jpg" alt="Lost and Found 4"></div>
+            </div>
+        </div>
+        <a href="amm.html" class="button">Back to the page</a>
+
+    <footer>
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h2>Bharatiya Vidya Bhavan</h2>
+            <p>Kulapathi Dr. K. M. Munshi founded Bharatiya Vidya Bhavan on 7 November 1938...</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-section links">
+            <h3>Sitemap</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section support">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">Examination</a></li>
+                <li><a href="#">Placement</a></li>
+                <li><a href="#">Alumni</a></li>
+                <li><a href="#">Payment Gateway</a></li>
+                <li><a href="#">Staff Mail Login</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>Bhavan's Vivekananda College, Sainikpuri, Hyderabad</p>
+            <p><i class="fas fa-phone"></i> 040-27111611, 27115878</p>
+            <p><i class="fas fa-envelope"></i> bvc@bhavansvc.ac.in</p>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>© 2025 Bhavan's Vivekananda College | Developed by <span>HONEY SOFT Technologies</span></p>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
