@@ -297,56 +297,70 @@
             <p class="par">The Lost and Found website is a digital platform designed to help students
              faculty, and staff.</p>
                 
-             <div class="form">
+               <div class="form">
                 <h2>Login Here</h2>
-                <input type="text" id="username" name="student_name" placeholder="Enter student name Here">
-                <input type="password" id="password" name="roll_number" placeholder="Enter roll number Here">
-                <button class="btnn" onclick="validateLogin()">
-                    <a href="#">Login</a>
-                </button>
+                <input type="email" id="email" placeholder="Enter Email Here"> <!-- Changed to type="email" -->
+                <input type="password" id="password" placeholder="Enter Password Here">
+                <button class="btnn" onclick="firebaseLogin()">	Login</button>
+                <div class="signup-btn">
+                   
 
-		<p class="link">Don't have an account<br>
-                    <a href="sign.html">Sign up </a> here</a></p>
-                    <p class="liw">Log in with</p>
-
-
-	
 
                 <div class="icons">
-                    <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-                    <a href="https://www.bing.com/search?q=bhavans+vivekananda+college&qs=MT&pq=bhavans+vi&sc=12-10&cvid=F0B83521C8BD473F8BDC8FE009CC411D&FORM=QBRE&sp=1&ghc=1&lq=0"><ion-icon name="logo-google"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                    <a href="https://www.facebook.com/p/Bhavans-Vivekananda-College-Sainikpuri-100089914713708/"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://www.instagram.com/bhavansvcsainikpuri/"><ion-icon name="logo-instagram"></ion-icon></a>
+                
+                    <a href="https://www.bing.com/search?q=bhavans+vivekananda+college&qs=MT&pq=bhavans+vi&sc=12-10&cvid=F0B83521C8BD473F8BDC8FE009CC411D&FORM=QBRE&sp=1&ghc=1&lq=0"><ion-icon name="logo-google"></ion-icon><br></a>
+                    
+
+			 <a href="sign.html">Don't have an account? Sign Up</a>
                 </div>
             </div>
         </div>
         </div>
-       
-       
-   
+     
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+ <!-- Firebase SDK -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+      import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+  
+      // Corrected Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDNOraXKzNqvP8C3Pq4sMDyFKHt8woACoc",
+        authDomain: "lost-and-found-134d7.firebaseapp.com",
+        projectId: "lost-and-found-134d7",
+        storageBucket: "lost-and-found-134d7.appspot.com",
+        messagingSenderId: "643910178123",
+        appId: "1:643910178123:web:bfbf50e053a51376fe04ce"
+      };
+  
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+  
+      // Login Function
+      window.firebaseLogin = function() {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
 
-    <script>
-        function validateLogin() {
-            // Get the values entered by the user
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-
-            // Check if the username is "bhuvan" and the password is "107222474023"
-            if (username === "bhuvan" && password === "107222474023")
-            {
-                // Redirect to another page (amm.html in your case)
-                window.location.href = "amm.html";
-            } else {
-                // Display an alert if credentials are incorrect
-                alert("Incorrect username or password. Please try again.");
-            }
+        if (!email || !password) {
+          alert("Please enter both email and password.");
+          return;
         }
+  
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            alert("Login Successful!");
+            window.location.href = "amm.html"; // Redirect on success
+          })
+          .catch((error) => {
+            alert("Error: " + error.message);
+          });
+      };
+    </script>
 
-	
-          </script>
           
                 
 </body>
